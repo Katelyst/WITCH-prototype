@@ -66,14 +66,13 @@ namespace StarterAssets
 		//also add steering
 		public void OnSteer(InputValue value)
         {
-			Debug.Log("Steering inputs: " + value.Get<Vector2>());
+			//Debug.Log("Steering inputs: " + value.Get<Vector2>());
 			SteeringInput(value.Get<Vector2>());
         }
 
 		//also add accellerating
 		public void OnAccelerate(InputValue value)
         {
-			Debug.Log("Accelerate input");
 			AccelerateInput(value.isPressed);
         }
 

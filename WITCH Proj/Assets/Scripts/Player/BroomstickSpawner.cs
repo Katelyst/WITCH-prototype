@@ -70,11 +70,6 @@ public class BroomstickSpawner : MonoBehaviour
             _GroundInput.mount = false;   //reset input value
             _FlyInput.dismount = false;
 
-            if(_FlyInput.dismount)
-            {
-                Debug.Log("Dismounting broomstick");
-            }
-
             // determine if broomstick should be spawned or destroyed, and if player should be spawned or destroyed. 
             mounted = !mounted;
 

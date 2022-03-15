@@ -24,8 +24,6 @@ public class FlightMovement : MonoBehaviour
         rb = false ? GetComponent<Rigidbody>() : rb;
         _input = false ? GetComponent<StarterAssetsInputs>() : _input;
 
-        //weird hack to reset velocity
-        Debug.Log("Reset rigidbody");
         rb.velocity = new Vector3(0f, 0f, 0f);
         rb.angularVelocity = new Vector3(0f, 0f, 0f);
     }
@@ -53,6 +51,7 @@ public class FlightMovement : MonoBehaviour
         rb.AddTorque(transform.right * pitch);
 
         //rotate witch for juicyness
+
     }
 
     void Yaw()
@@ -64,7 +63,7 @@ public class FlightMovement : MonoBehaviour
 
     }
 
-    //just locks roll in the Z axis, because we are not making a flight sim here
+    //currently just locks roll in the Z axis, because we are not making a flight sim here
     void Roll()
     {
         Quaternion current = transform.rotation;
@@ -80,7 +79,6 @@ public class FlightMovement : MonoBehaviour
     void Velocity()
     {
         //accellerate and deccellerate
-
         if(_input.accelerate)
         {
             rb.AddRelativeForce(new Vector3(0.0f, 0.0f, flightSpeed));
