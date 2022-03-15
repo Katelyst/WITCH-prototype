@@ -8,4 +8,6 @@ public class Tags
     public static string playerTag = "Player";
     public static string broomstickTag = "Broomstick";
     public static string followCameraTag = "MainVirtualCamera";
+    public static string cinemachineTargetTag0 = "CinemachineTarget";
+    public static string cinemachineTargetTag1 = "CinemachineTarget1";
 }

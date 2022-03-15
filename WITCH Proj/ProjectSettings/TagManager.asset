@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CinemachineTarget
   - Broomstick
+  - MainVirtualCamera
+  - CinemachineTarget1
   layers:
   - Default
   - TransparentFX

@@ -257,28 +257,28 @@
             "id": "8ee908cb-c2df-4c14-98b9-39c8860122bf",
             "actions": [
                 {
-                    "name": "Accellerate",
-                    "type": "Button",
-                    "id": "e97386f4-2bd6-4d82-a5e4-1499cb353548",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Decellerate",
-                    "type": "Button",
-                    "id": "cac0f8ac-942b-40c1-afbe-7b9890a114f9",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Steer",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "6c8e1ced-f4ce-48e6-b58a-edd3f5199919",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Accelerate",
+                    "type": "PassThrough",
+                    "id": "e97386f4-2bd6-4d82-a5e4-1499cb353548",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Decelerate",
+                    "type": "PassThrough",
+                    "id": "cac0f8ac-942b-40c1-afbe-7b9890a114f9",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -301,7 +301,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Accellerate",
+                    "action": "Accelerate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -312,7 +312,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Accellerate",
+                    "action": "Accelerate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -323,7 +323,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Decellerate",
+                    "action": "Decelerate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -334,7 +334,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Decellerate",
+                    "action": "Decelerate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed5a8ca1-1e64-4360-9f90-73eee32aac8e",
+                    "path": "<Gamepad>/rightStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Dismount",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "09568632-c243-4a8a-971b-ed2c4918e038",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Dismount",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -445,28 +467,6 @@
                     "processors": "StickDeadzone",
                     "groups": "Gamepad",
                     "action": "Steer",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ed5a8ca1-1e64-4360-9f90-73eee32aac8e",
-                    "path": "<Gamepad>/rightStickPress",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Dismount",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "09568632-c243-4a8a-971b-ed2c4918e038",
-                    "path": "<Keyboard>/m",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Dismount",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
