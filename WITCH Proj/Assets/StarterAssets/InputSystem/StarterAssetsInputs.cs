@@ -10,10 +10,13 @@ namespace StarterAssets
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
+		public Vector2 steering;
 		public bool jump;
 		public bool sprint;
 		public bool mount;
 		public bool dismount;
+		public bool accelerate;
+		public bool decelerate;
 
 
 		[Header("Movement Settings")]
@@ -61,12 +64,27 @@ namespace StarterAssets
 		}
 
 		//also add steering
+		public void OnSteer(InputValue value)
+        {
+			//Debug.Log("Steering inputs: " + value.Get<Vector2>());
+			SteeringInput(value.Get<Vector2>());
+        }
+
 		//also add accellerating
+		public void OnAccelerate(InputValue value)
+        {
+			AccelerateInput(value.isPressed);
+        }
+
 		//also add deccellerating
+		public void OnDecelerate(InputValue value)
+        {
+			DecelerateInput(value.isPressed);
+        }
+
 #else
 	// old input sys if we do decide to have it (most likely wont)...
 #endif
-
 
 		public void MoveInput(Vector2 newMoveDirection)
 		{
@@ -97,6 +115,21 @@ namespace StarterAssets
         {
 			dismount = newDismountState;
         }
+		public void SteeringInput(Vector2 newSteeringDirection)
+		{
+			steering = newSteeringDirection;
+		}
+
+		public void AccelerateInput(bool newAccelerateState)
+        {
+			accelerate = newAccelerateState;
+        }
+
+		public void DecelerateInput(bool newDecelerateState)
+        {
+			decelerate = newDecelerateState;
+        }
+
 
 #if !UNITY_IOS || !UNITY_ANDROID
 

@@ -24,6 +24,9 @@ public class BroomstickSpawner : MonoBehaviour
     private GameObject player;
     [SerializeField]
     private Cinemachine.CinemachineVirtualCamera virtualCam;
+    [SerializeField]
+    private GameObject cinemachineTarget0, cinemachineTarget1;  //ground and air player targets respectively
+
 
     [SerializeField][Range(0.0f, 10.0f)]
     private float takeoffOffset = 5.0f; 
@@ -34,6 +37,9 @@ public class BroomstickSpawner : MonoBehaviour
     {
         virtualCam = GameObject.FindWithTag(Tags.followCameraTag).GetComponent<Cinemachine.CinemachineVirtualCamera>();
         Assert.IsTrue(virtualCam);  //If this asserts it means you have no PlayerFollowCamera-like obj in your scene. Reference playground scene.
+
+
+
         player = GameObject.FindWithTag(Tags.playerTag);
         Assert.IsTrue(player);
         broomstick = GameObject.FindWithTag(Tags.broomstickTag);
@@ -64,11 +70,6 @@ public class BroomstickSpawner : MonoBehaviour
             _GroundInput.mount = false;   //reset input value
             _FlyInput.dismount = false;
 
-            if(_FlyInput.dismount)
-            {
-                Debug.Log("Dismounting broomstick");
-            }
-
             // determine if broomstick should be spawned or destroyed, and if player should be spawned or destroyed. 
             mounted = !mounted;
 
@@ -89,12 +90,22 @@ public class BroomstickSpawner : MonoBehaviour
         _FlyPlayerInput.enabled = false;
         _GroundPlayerInput.enabled = true;
 
-        broomstick.SetActive(false);
-        player.SetActive(true);
+        //match rotation of broomstick, except on Y axis
+        Quaternion playerRot = new Quaternion();
+        playerRot.eulerAngles = new Vector3(
+            0,
+            broomstick.transform.rotation.eulerAngles.y,
+            0
+        );
 
+        player.transform.rotation = playerRot;
         player.transform.position = broomstick.transform.position;
 
         playerFlying = false;
+        virtualCam.Follow = cinemachineTarget0.transform;
+
+        broomstick.SetActive(false);
+        player.SetActive(true);
     }
 
     private void ActivateFlyPlayer()
@@ -103,11 +114,21 @@ public class BroomstickSpawner : MonoBehaviour
         _FlyPlayerInput.enabled = true;
         _GroundPlayerInput.enabled = false;
         
-        broomstick.SetActive(true);
-        player.SetActive(false);
+        //match rotation of player, except on Y axis
+        Quaternion broomstickRot = new Quaternion();
+        broomstickRot.eulerAngles = new Vector3(
+            player.transform.rotation.eulerAngles.x,
+            player.transform.rotation.eulerAngles.y,
+            player.transform.rotation.eulerAngles.z
+        );
 
+        broomstick.transform.rotation = broomstickRot;
         broomstick.transform.position = player.transform.position + new Vector3(0.0f, takeoffOffset, 0.0f);
 
         playerFlying = true;
+        virtualCam.Follow = cinemachineTarget1.transform;
+
+        broomstick.SetActive(true);
+        player.SetActive(false);
     }
 }
