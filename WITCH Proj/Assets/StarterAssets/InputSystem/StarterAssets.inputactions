@@ -167,7 +167,7 @@
                     "id": "ed66cbff-2900-4a62-8896-696503cfcd31",
                     "path": "<Pointer>/delta",
                     "interactions": "",
-                    "processors": "InvertVector2(invertX=false),ScaleVector2(x=15,y=15)",
+                    "processors": "InvertVector2(invertX=false),ScaleVector2(x=25,y=25)",
                     "groups": "KeyboardMouse",
                     "action": "Look",
                     "isComposite": false,
@@ -467,6 +467,54 @@
                     "processors": "StickDeadzone",
                     "groups": "Gamepad",
                     "action": "Steer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Conversation",
+            "id": "7f87b984-06f7-4a33-b625-b121f059e897",
+            "actions": [
+                {
+                    "name": "Point",
+                    "type": "Value",
+                    "id": "ce821c02-89a5-4777-9635-21b1fd831467",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "41f13dea-8e06-43f3-baa0-0080117a76c4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "11b20211-d345-470f-a4be-3456b34abeb8",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "InvertVector2(invertX=false,invertY=false),ScaleVector2(x=15,y=15)",
+                    "groups": "KeyboardMouse",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e3286cf-463f-4b21-8753-b737e7684d8c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Greeting said at start of conversation -->
+<!-- NPC tag is the NPC answer to the player's response, will be printed to the dialogue box -->
+<!-- Response tag is a player option that should be printed to a button -->
+<!-- Tree(int) tags are the conversation's contents after the greeting-->
+<CharacterCollection>
+  <Characters>
+    
+    <Character name="ScamWitch0">
+      
+    <Name>Scam Witch</Name>
+      <Greeting>Hello, protagonist! You're just in time for your latest lesson, my favourite (and only) student...! To get rid of that stupid magic vine we need a good old pyrokinesis potion. Do you remember it from your latest lesson?
+		  <Response next="0">Next</Response>
+      </Greeting>
+
+      <Tree0>Those chumps think their "weedkiller" will do the job, but I doubt it. We need some toadskin vinegar to make the potion, could you get it? I promise to treat you to your favourite CDs when we get inside the mall!
+		  <Response next="1">Next</Response>
+      </Tree0>
+
+      <Tree1>Hmmm. There's a park nearby where a few of these nice toads live. If you ask them nicely I'm sure they will give you some of their...juices. It works as a good day cream as well! They're amazing singers too. Off to it! Mom doesn't have all day.
+		  <Response next="Quit">Thank you!</Response>
+      </Tree1>
+
+      <Tree2>Oh, care to give it a shot and help me out? I need some sticks and stones
+        <Response next="3">Sure, I'll do my best</Response>
+        <Response next="Quit">No thanks, i should go</Response>
+      </Tree2>
+
+      <Tree3>Great! You can bring them to me tomorrow
+        <Response next="Quit">See you then</Response>
+      </Tree3>
+
+      
+    </Character>
+
+    <Character name="Armin">
+      
+      <Name>Armin</Name>
+      
+      <Greeting>Hey, my dude!
+        <Response next="0">...Hello?</Response>
+        <Response next="Quit">Bye</Response>
+      </Greeting>
+
+      <Tree0>Wanna buy some smiley, my dude?
+        <Response next="1">N-no...</Response>
+        <Response next="2">No thank you</Response>
+        <Response next="Quit">Go away</Response>
+      </Tree0>
+
+      <Tree1>I can see theres not much confidence there, my dude. You should buy some smileys
+        <Response next="3">...yes?</Response>
+        <Response next="Quit">NO!</Response>
+      </Tree1>
+
+      <Tree2>Aw dont do that, my dude. Buy some smileys
+        <Response next="0">my dude...?</Response>
+      </Tree2>
+
+      <Tree3>Thats the spirit, my dude. Want a croissant while youre at it?
+        <Response next="Quit">No</Response>
+        <Response next="Quit">No</Response>
+        <Response next="Quit">No</Response>
+      </Tree3>
+      
+    </Character>
+
+  </Characters>
+</CharacterCollection>

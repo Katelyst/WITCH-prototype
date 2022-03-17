@@ -8,11 +8,15 @@ TagManager:
   - Broomstick
   - MainVirtualCamera
   - CinemachineTarget1
+  - Canvas
+  - NameText
+  - DialogueText
+  - TestNPC
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NPC
   - Water
   - UI
   - 

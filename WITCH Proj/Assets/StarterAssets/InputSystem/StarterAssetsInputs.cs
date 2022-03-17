@@ -17,6 +17,7 @@ namespace StarterAssets
 		public bool dismount;
 		public bool accelerate;
 		public bool decelerate;
+		public bool cursorPersist = false;
 
 
 		[Header("Movement Settings")]
@@ -82,11 +83,21 @@ namespace StarterAssets
 			DecelerateInput(value.isPressed);
         }
 
+		public void OnClick(InputValue value)
+        {
+			//for clicking
+        }
+
+		public void OnPoint(InputValue value)
+        {
+			//for hovering
+        }
+
 #else
 	// old input sys if we do decide to have it (most likely wont)...
 #endif
 
-		public void MoveInput(Vector2 newMoveDirection)
+        public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
 		} 
@@ -131,10 +142,16 @@ namespace StarterAssets
         }
 
 
+
 #if !UNITY_IOS || !UNITY_ANDROID
 
 		private void OnApplicationFocus(bool hasFocus)
 		{
+			//prevent cursor lock state from changing if "cursorPersist" is true. useful for preventing cursor from dissapearing during NPC conversations
+			if (cursorPersist)
+            {
+				return;
+            }
 			SetCursorState(cursorLocked);
 		}
 
