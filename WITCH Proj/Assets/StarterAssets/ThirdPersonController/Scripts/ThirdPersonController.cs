@@ -122,6 +122,10 @@ namespace StarterAssets
 			
 			JumpAndGravity();
 			GroundedCheck();
+		}
+
+        private void FixedUpdate()
+        {
 			Move();
 		}
 
