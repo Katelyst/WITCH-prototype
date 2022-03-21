@@ -249,6 +249,7 @@ MonoBehaviour:
   dismount: 0
   accelerate: 0
   decelerate: 0
+  cursorPersist: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -268,7 +269,7 @@ MonoBehaviour:
   _input: {fileID: 4247779368593192585}
   pitchMultiplier: 1
   yawMultiplier: 1
-  flightSpeed: 100
+  flightSpeed: 50
 --- !u!54 &1829261001
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -278,8 +279,8 @@ Rigidbody:
   m_GameObject: {fileID: 7869520136105686924}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 5
-  m_AngularDrag: 10
+  m_Drag: 3
+  m_AngularDrag: 7
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
