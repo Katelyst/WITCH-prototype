@@ -13089,6 +13089,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4232163480225232864, guid: 911c13f62bedcf2428c3e08cd06b67c7, type: 3}
+      propertyPath: JumpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 654db39a3bc3c9449858ded87ae88518, type: 3}
+    - target: {fileID: 4232163480225232864, guid: 911c13f62bedcf2428c3e08cd06b67c7, type: 3}
+      propertyPath: FootstepClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e18d2380b3ad1a4e921661183f86839, type: 3}
     - target: {fileID: 7102062132395451164, guid: 911c13f62bedcf2428c3e08cd06b67c7, type: 3}
       propertyPath: m_Name
       value: SmolPlayerArmature Variant

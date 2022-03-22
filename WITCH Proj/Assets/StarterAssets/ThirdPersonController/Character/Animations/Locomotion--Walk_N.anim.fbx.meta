@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 8269a9f8cf495034c817722ac21f309f
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 21202
   internalIDToNameTable:
   - first:
       74: 1657602633327794031
@@ -17,6 +17,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -58,7 +59,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.36623377
+        functionName: PlayFootstepAudio
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: a05b1ed0a51cbd44a8fb798a6ad90322, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.84155846
+        functionName: PlayFootstepAudio
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: a05b1ed0a51cbd44a8fb798a6ad90322, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -75,6 +90,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -86,6 +102,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -906,8 +923,7 @@ ModelImporter:
     hasTranslationDoF: 1
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1

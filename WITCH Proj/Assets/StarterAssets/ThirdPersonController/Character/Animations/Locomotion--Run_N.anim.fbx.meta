@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 16114d403eabb53438de032c6f0d1deb
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 21202
   internalIDToNameTable:
   - first:
       74: 6564411413370888346
@@ -17,14 +17,10 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
-      copied configuration does not match position in animation file:\n\t'Left_UpperLeg'
-      : position error = 3.626586 mm\n\t'Left_Foot' : position error = 12.542060
-      mm\n\t'Left_Toes' : position error = 30.265436 mm\n\t'Right_UpperLeg' : position
-      error = 3.626659 mm\n\t'Right_Foot' : position error = 12.543159 mm\n\t'Right_Toes'
-      : position error = 30.260939 mm\n"
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -63,7 +59,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.35584417
+        functionName: PlayFootstepAudio
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: a05b1ed0a51cbd44a8fb798a6ad90322, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.8779221
+        functionName: PlayFootstepAudio
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: a05b1ed0a51cbd44a8fb798a6ad90322, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -80,6 +90,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -91,6 +102,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -911,8 +923,7 @@ ModelImporter:
     hasTranslationDoF: 1
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
