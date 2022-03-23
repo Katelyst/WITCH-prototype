@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using StarterAssets;
 using UnityEngine.Assertions;
+using ScriptableData;
 
 public class BroomstickSpawner : MonoBehaviour
 {
@@ -34,6 +35,13 @@ public class BroomstickSpawner : MonoBehaviour
     //[SerializeField]
     //private AudioClip MountBroomAudio; FOR WHEN WE WANT TO IMPLEMENTAUDIO :)
     private Transform followTrans;
+
+    [Header("Audio Events")]
+    [SerializeField]
+    private SDBool WitchMountEvent;
+    private SDGameObject gameObj;
+    //if not using ScriptableData at top of file, add it before type
+    //private ScriptableData.SDBool WitchMountEvent;
 
     void Start()
     {
@@ -78,10 +86,12 @@ public class BroomstickSpawner : MonoBehaviour
             if(mounted)
             {
                 ActivateFlyPlayer();
+                WitchMountEvent.Invoke(mounted);
             }
             else
             {
                 ActivateGroundPlayer();
+                WitchMountEvent.Invoke(mounted);
             }
         }
     }
