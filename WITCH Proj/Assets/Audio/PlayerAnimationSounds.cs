@@ -15,8 +15,8 @@ public class PlayerAnimationSounds : MonoBehaviour
     void Start()
     {
         AnimationSoundPlayer = GetComponent<AudioSource>();
-       // FootstepClip = Resources.Load("Assets/Resources/AudioResources/Witch_Player_Footstep_Stone01.wav") as AudioClip;
-       // JumpClip = Resources.Load("Assets/Resources/AudioResources/Witch_Hop.wav") as AudioClip;
+        // FootstepClip = Resources.Load("Assets/Resources/AudioResources/Witch_Player_Footstep_Stone01.wav") as AudioClip;
+        // JumpClip = Resources.Load("Assets/Resources/AudioResources/Witch_Hop.wav") as AudioClip;
     }
 
     // Update is called once per frame

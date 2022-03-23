@@ -28,6 +28,9 @@ public class BroomstickSpawner : MonoBehaviour
     [SerializeField]
     private GameObject cinemachineTarget0, cinemachineTarget1;  //ground and air player targets respectively
 
+    [SerializeField]
+    private ParticleSystem mountUpParticleSystem;
+
 
     [SerializeField][Range(0.0f, 10.0f)]
     private float takeoffOffset = 5.0f; 
@@ -118,6 +121,8 @@ public class BroomstickSpawner : MonoBehaviour
 
         broomstick.SetActive(false);
         player.SetActive(true);
+
+        mountUpParticleSystem.Stop();
     }
 
     private void ActivateFlyPlayer()
@@ -142,5 +147,7 @@ public class BroomstickSpawner : MonoBehaviour
 
         broomstick.SetActive(true);
         player.SetActive(false);
+
+        mountUpParticleSystem.Play();
     }
 }
