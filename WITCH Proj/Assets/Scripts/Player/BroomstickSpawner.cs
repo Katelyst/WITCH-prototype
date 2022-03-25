@@ -122,7 +122,7 @@ public class BroomstickSpawner : MonoBehaviour
         broomstick.SetActive(false);
         player.SetActive(true);
 
-        mountUpParticleSystem.Stop();
+        //mountUpParticleSystem.Stop();
     }
 
     private void ActivateFlyPlayer()
@@ -148,6 +148,6 @@ public class BroomstickSpawner : MonoBehaviour
         broomstick.SetActive(true);
         player.SetActive(false);
 
-        mountUpParticleSystem.Play();
+        //mountUpParticleSystem.Play();
     }
 }
