@@ -3,23 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableData;
 
-public struct AudioEventData
-{
-    public AudioClip clip;
-    public SDAudioClip clipDataEvent;
-}
 
+//WIP
 public class AudioHolder : MonoBehaviour
 {
+    [SerializeField]
+    private List<AudioEventData> audioClipEvents = new List<AudioEventData>();
 
+    [SerializeField]
+    private Dictionary<int, AudioEventData> audioClipsDict = new Dictionary<int, AudioEventData>();
 
-    void Start()
+    private void Awake()
     {
-        
+        foreach(AudioEventData aed in audioClipEvents)
+        {
+            aed.triggerEvent.OnValueChangedEvent += AssignEvent;
+        }
     }
 
-    void Update()
+    private void AssignEvent(bool aed)
     {
-        
+        //external object has said this sound effect should be played
+        audioClipEvents[0].clipDataEvent.Invoke(audioClipEvents[0].source);
     }
+
+}
+
+public class AudioEventObject : ScriptableObject
+{
+
 }

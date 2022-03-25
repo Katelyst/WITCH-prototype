@@ -79,7 +79,7 @@ public class BroomstickSpawner : MonoBehaviour
     {
         if(_GroundInput.mount || _FlyInput.dismount)
         {
-            Debug.Log("Mounting broomstick");
+            //Debug.Log("Mounting broomstick");
             _GroundInput.mount = false;   //reset input value
             _FlyInput.dismount = false;
 

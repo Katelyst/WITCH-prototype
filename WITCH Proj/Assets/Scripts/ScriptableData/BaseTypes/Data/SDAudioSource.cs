@@ -5,5 +5,5 @@ using UnityEngine;
 namespace ScriptableData
 {
     [CreateAssetMenu(menuName = "ScriptableData/Data/AudioClip", order = 146)]
-    public class SDAudioClip : ScriptableData<AudioClip> { }
+    public class SDAudioSource : ScriptableData<AudioSource> { }
 }
